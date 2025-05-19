@@ -1,0 +1,7 @@
+<p id="internet-status">Checking internet connection...</p>
+
+<script>
+  fetch("https://www.google.com", {mode: "no-cors"})
+    .then(() => document.getElementById('internet-status').textContent = "✅ You are online.")
+    .catch(() => document.getElementById('internet-status').textContent = "❌ You are offline.");
+</script>
